@@ -6,7 +6,7 @@
 /*   By: aperez-b <aperez-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 15:09:15 by aperez-b          #+#    #+#             */
-/*   Updated: 2022/03/23 19:16:46 by aperez-b         ###   ########.fr       */
+/*   Updated: 2022/03/23 21:10:15 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,9 @@
 Phonebook::Phonebook(void)
 {
 	this->_index = 0;
-	std::cout << "Welcome to Crappy! Created an empty phonebook" << std::endl;
+	std::cout << \
+		"Welcome to Crappy! Created an empty phonebook for up to 8 contacts" \
+		<< std::endl;
 }
 
 Phonebook::~Phonebook(void)
@@ -34,25 +36,30 @@ void	Phonebook::add(void)
 	std::cout << "Enter a first name: ";
 	std::cin >> str;
 	this->_contacts[this->_index % 8].set_fname(str);
-	std::cout << "Enter a last name: ";
+	std::cout << "Enter " << \
+		this->_contacts[this->_index % 8].get_fname() << "'s last name: ";
 	std::cin >> str;
 	this->_contacts[this->_index % 8].set_lname(str);
-	std::cout << "Enter a nickname: ";
+	std::cout << "Enter " << \
+		this->_contacts[this->_index % 8].get_fname() << "'s nickname: ";
 	std::cin >> str;
 	this->_contacts[this->_index % 8].set_nick(str);
-	std::cout << "Enter a phone number: ";
+	std::cout << "Enter " << \
+		this->_contacts[this->_index % 8].get_fname() << "'s phone number: ";
 	std::cin >> str;
 	this->_contacts[this->_index % 8].set_phone_num(str);
-	std::cout << "Enter a darkest secret: ";
+	std::cout << "Enter " << \
+		this->_contacts[this->_index % 8].get_fname() << "'s darkest secret: ";
 	std::cin >> str;
 	this->_contacts[this->_index % 8].set_secret(str);
+	std::cout << this->_contacts[this->_index % 8].get_fname() << \
+		" successfully added to phonebook [" << this->_index % 8 + 1 << "/8]" << std::endl;
 	this->_index++;
-	std::cout << "Contact successfully added to phonebook" << std::endl;
 }
 
 void	Phonebook::print(Contact contact)
 {
-	std::cout << "Requesting contact information..." << std::endl;
+	std::cout << std::endl << "Requesting contact information..." << std::endl;
 	if (!contact.get_fname().size())
 	{
 		std::cout << "Failed to get info for this contact" << std::endl;
@@ -73,16 +80,20 @@ Contact	Phonebook::get_contact(int index)
 void	Phonebook::search(void)
 {
 	std::string	str;
+	char		i;
 
-	search_ui(this->_contacts);
-	while (1)
+	i = search_ui(this->_contacts);
+	while (i)
 	{
 		std::cout << "Select an index: ";
 		std::cin >> str;
-		if (str.size() == 1 && str[0] >= '0' && str[0] <= '7' && \
-			this->_contacts[str[0] - '0'].get_fname().size())
+		if (str.size() == 1 && str[0] >= '1' && str[0] <= '8' && \
+			this->_contacts[str[0] - 1 - '0'].get_fname().size())
 			break ;
-		std::cout << "INVALID NUMBER!" << std::endl;
+		std::cout << "Invalid index!" << std::endl;
 	}
-	this->print(this->_contacts[str[0] - '0']);
+	if (i)
+		this->print(this->_contacts[str[0] - 1 - '0']);
+	else
+		std::cout << std::endl << "Phonebook is empty!" << std::endl;
 }

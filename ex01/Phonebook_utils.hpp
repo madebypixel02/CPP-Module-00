@@ -6,7 +6,7 @@
 /*   By: aperez-b <aperez-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 17:31:48 by aperez-b          #+#    #+#             */
-/*   Updated: 2022/03/23 19:15:41 by aperez-b         ###   ########.fr       */
+/*   Updated: 2022/03/23 21:07:49 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,6 @@ std::string	add_spaces(int n);
 std::string	fix_width(std::string str, long unsigned max);
 
 /* Prints existing contacts with a pretty format */
-void	search_ui(Contact contacts[8]);
+int			search_ui(Contact contacts[8]);
 
 #endif
