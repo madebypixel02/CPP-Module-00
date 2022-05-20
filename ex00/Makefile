@@ -6,7 +6,7 @@
 #    By: aperez-b <aperez-b@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/14 14:11:00 by aperez-b          #+#    #+#              #
-#    Updated: 2022/03/22 16:00:53 by aperez-b         ###   ########.fr        #
+#    Updated: 2022/05/20 10:36:18 by aperez-b         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ SRC = megaphone.cpp
 OBJ = $(SRC:.cpp=.o)
 CC = g++
 RM = rm -f
-CPPFLAGS = -Wall -Wextra -Werror -std=c++98
+CPPFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
 
 NAME = megaphone
 
