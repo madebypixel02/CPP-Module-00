@@ -6,7 +6,7 @@
 #    By: aperez-b <aperez-b@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/14 14:11:00 by aperez-b          #+#    #+#              #
-#    Updated: 2022/06/13 10:35:45 by aperez-b         ###   ########.fr        #
+#    Updated: 2022/06/13 11:27:43 by aperez-b         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,6 +15,13 @@ OBJ = $(SRC:.cpp=.o)
 CC = g++
 RM = rm -f
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
+
+UNAME = $(shell uname -s)
+
+ifeq ($(UNAME), Linux)
+CPPFLAGS = -Wall -Wextra -pedantic
+$(warning Linux detected! Disabling -Werror and -std=c++98...)
+endif
 
 NAME = dream
 
