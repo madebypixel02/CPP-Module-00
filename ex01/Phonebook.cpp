@@ -6,7 +6,7 @@
 /*   By: aperez-b <aperez-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 15:09:15 by aperez-b          #+#    #+#             */
-/*   Updated: 2022/06/13 10:10:47 by aperez-b         ###   ########.fr       */
+/*   Updated: 2022/06/13 10:52:20 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,8 +112,8 @@ void	Phonebook::search(void)
 		if (str != "")
 			std::cout << "Invalid index!" << std::endl;
 	}
-	if (i)
+	if (!std::cin.fail() && i)
 		this->print(this->_contacts[str[0] - 1 - '0']);
-	else
+	else if (!std::cin.fail())
 		std::cout << std::endl << "Phonebook is empty!" << std::endl;
 }
