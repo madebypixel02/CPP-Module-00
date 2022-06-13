@@ -6,7 +6,7 @@
 /*   By: aperez-b <aperez-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 15:09:15 by aperez-b          #+#    #+#             */
-/*   Updated: 2022/06/13 10:52:20 by aperez-b         ###   ########.fr       */
+/*   Updated: 2022/06/13 10:57:48 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,35 +33,35 @@ void	Phonebook::add(void)
 	str = "";
 	if (this->_index > 7)
 		std::cout << "Warning: overwriting info about " << this->_contacts[this->_index % 8].get_fname() << std::endl;
-	while (!std::cin.fail() && str == "")
+	while (!std::cin.eof() && str == "")
 	{
 		std::cout << "Enter a first name: ";
 		if (std::getline(std::cin, str) && str != "")
 			this->_contacts[this->_index % 8].set_fname(str);
 	}
 	str = "";
-	while (!std::cin.fail() && str == "")
+	while (!std::cin.eof() && str == "")
 	{
 		std::cout << "Enter " << this->_contacts[this->_index % 8].get_fname() << "'s last name: ";
 		if (std::getline(std::cin, str) && str != "")
 			this->_contacts[this->_index % 8].set_lname(str);
 	}
 	str = "";
-	while (!std::cin.fail() && str == "")
+	while (!std::cin.eof() && str == "")
 	{
 		std::cout << "Enter " << this->_contacts[this->_index % 8].get_fname() << "'s nickname: "; 
 		if (std::getline(std::cin, str) && str != "")
 			this->_contacts[this->_index % 8].set_nick(str);
 	}
 	str = "";
-	while (!std::cin.fail() && str == "")
+	while (!std::cin.eof() && str == "")
 	{
 		std::cout << "Enter " << this->_contacts[this->_index % 8].get_fname() << "'s phone number: ";
 		if (std::getline(std::cin, str) && str != "")
 			this->_contacts[this->_index % 8].set_phone_num(str);
 	}
 	str = "";
-	while (!std::cin.fail() && str == "")
+	while (!std::cin.eof() && str == "")
 	{
 		std::cout << "Enter " << this->_contacts[this->_index % 8].get_fname() << "'s darkest secret: ";
 		if (std::getline(std::cin, str) && str != "")
@@ -100,7 +100,7 @@ void	Phonebook::search(void)
 	char		i;
 
 	i = search_ui(this->_contacts);
-	while (!std::cin.fail())
+	while (!std::cin.eof())
 	{
 		std::cout << "Select an index: ";
 		if (std::getline(std::cin, str) && str != "")
@@ -112,8 +112,8 @@ void	Phonebook::search(void)
 		if (str != "")
 			std::cout << "Invalid index!" << std::endl;
 	}
-	if (!std::cin.fail() && i)
+	if (!std::cin.eof() && i)
 		this->print(this->_contacts[str[0] - 1 - '0']);
-	else if (!std::cin.fail())
+	else if (!std::cin.eof())
 		std::cout << std::endl << "Phonebook is empty!" << std::endl;
 }
