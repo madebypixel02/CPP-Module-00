@@ -6,7 +6,7 @@
 /*   By: aperez-b <aperez-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 15:07:43 by aperez-b          #+#    #+#             */
-/*   Updated: 2022/03/23 18:16:57 by aperez-b         ###   ########.fr       */
+/*   Updated: 2022/06/13 09:21:05 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 # define CONTACT_HPP
 
 # include <iostream>
+# include <string>
 
 class	Contact
 {

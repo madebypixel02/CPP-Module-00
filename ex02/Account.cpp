@@ -6,7 +6,7 @@
 /*   By: aperez-b <aperez-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/21 11:20:53 by aperez-b          #+#    #+#             */
-/*   Updated: 2022/05/16 15:49:05 by aperez-b         ###   ########.fr       */
+/*   Updated: 2022/06/13 10:23:22 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ void	Account::_displayTimestamp(void)
 {
 	time_t	now;
 
-	now = time(nullptr);
+	now = time(NULL);
 	std::cout << std::put_time(localtime(&now), "[%Y%m%d_%H%M%S] ");
 }
 
