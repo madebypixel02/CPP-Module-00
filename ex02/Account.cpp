@@ -6,7 +6,7 @@
 /*   By: aperez-b <aperez-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/21 11:20:53 by aperez-b          #+#    #+#             */
-/*   Updated: 2022/06/13 10:23:22 by aperez-b         ###   ########.fr       */
+/*   Updated: 2022/06/16 12:41:12 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ int	Account::_totalAmount = 0;
 
 Account::Account(int initial_deposit)
 {
+	this->_nbDeposits = 0;
+	this->_nbWithdrawals = 0;
 	this->_accountIndex = this->getNbAccounts();
 	this->_amount = initial_deposit;
 	Account::_totalAmount += initial_deposit;
