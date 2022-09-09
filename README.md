@@ -4,16 +4,16 @@
 
 ### Table of Contents
 
-* [Introduction](#introduction)
-* [ex00](#ex00)
-	+ [Example](#example-00)
-* [ex01](#ex01)
-	+ [Example](#example-01)
-* [ex02](#ex02)
-	+ [Example](#example-02)
-* [Installation](#installation)
-* [References](#references)
-* [Summary](#summary)
+- [Introduction](#introduction)
+- [ex00](#ex00)
+	* [Example](#example-00)
+- [ex01](#ex01)
+	* [Example](#example-01)
+- [ex02](#ex02)
+	* [Example](#example-02)
+- [Installation](#installation)
+- [References](#references)
+- [Summary](#summary)
 
 ## Introduction
 
