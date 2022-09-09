@@ -26,7 +26,7 @@ This first exercise is quite simple, we are asked to create a program that takes
 ### Example
 
 <p align="center">
-    <img src="https://user-images.githubusercontent.com/40824677/189319303-b1058793-9c02-40b1-b086-c667529a37c2.png">
+    <img src="https://user-images.githubusercontent.com/40824677/189324945-b80fb99d-3b0a-4986-9e1c-1529fa5b47f7.png">
 </p>
 
 ## ex01
@@ -36,15 +36,17 @@ This second exercise is a bit more fun. We have to simulate a phonebook with a t
 ### Example
 
 <p align="center">
-    <img src="https://user-images.githubusercontent.com/40824677/189320180-d49f386c-5702-4437-930f-df0db8626d15.png">
+    <img src="https://user-images.githubusercontent.com/40824677/189323784-a732a276-86d6-4fa8-88f7-38eca47bce26.png">
 </p>
 
 ## ex02
 
+In this third and last exercise we are given two files which will help us build a class and all the necessary static and member functions so that the provided main function in **tests.cpp** creates the same output as the file **19920104_091532.log** (save the different timestamps). Our job is to figure out what the functions do to create the appropriate file **Account.cpp**. We are also given the header file containing the class definition in **Account.hpp**.
+
 ### Example
 
 <p align="center">
-    <img src="https://user-images.githubusercontent.com/40824677/189320782-5374f56c-5862-4384-895d-6e2fe281bb97.png">
+    <img src="https://user-images.githubusercontent.com/40824677/189324539-204da555-2662-444f-81a8-6a99d6136ebf.png">
 </p>
 
 ## Installation
@@ -58,8 +60,7 @@ For this project and fututre C++ projects it is only required to have `clang` an
 
 
 ## Summary
-
-As a first module, it was mostly easy, except for *ex02*, which was a bit tricky to understand at first.
+For a first module, it was mostly easy, except for *ex02*, which was a bit tricky to understand at first.
 
 May 2022
 
