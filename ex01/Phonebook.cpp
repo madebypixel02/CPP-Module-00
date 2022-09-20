@@ -6,7 +6,7 @@
 /*   By: aperez-b <aperez-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 15:09:15 by aperez-b          #+#    #+#             */
-/*   Updated: 2022/09/20 12:44:55 by aperez-b         ###   ########.fr       */
+/*   Updated: 2022/09/20 12:48:36 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,10 +97,8 @@ Contact	Phonebook::get_contact(int index)
 void	Phonebook::search(void)
 {
 	std::string	str;
-	char		i;
 
-	i = search_ui(this->_contacts);
-	if (!i)
+	if (!search_ui(this->_contacts))
 	{
 		std::cout << std::endl << "Phonebook is empty!" << std::endl;
 		return ;
@@ -117,6 +115,6 @@ void	Phonebook::search(void)
 		if (str != "")
 			std::cout << "Invalid index!" << std::endl;
 	}
-	if (!std::cin.eof() && i)
+	if (!std::cin.eof())
 		this->print(this->_contacts[str[0] - 1 - '0']);
 }
