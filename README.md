@@ -25,9 +25,9 @@ This first exercise is quite simple, we are asked to create a program that takes
 
 ### Example
 
-<p align="center">
+<div align="center">
     <img src="https://user-images.githubusercontent.com/40824677/189324945-b80fb99d-3b0a-4986-9e1c-1529fa5b47f7.png">
-</p>
+</div>
 
 ## ex01. My Awesome PhoneBook
 
@@ -35,9 +35,9 @@ This second exercise is a bit more fun. We have to simulate a phonebook with a t
 
 ### Example
 
-<p align="center">
+<div align="center">
     <img src="https://user-images.githubusercontent.com/40824677/189323784-a732a276-86d6-4fa8-88f7-38eca47bce26.png">
-</p>
+</div>
 
 ## ex02. The Job Of Your Dreams
 
@@ -45,9 +45,9 @@ In this third and last exercise we are given two files which will help us build 
 
 ### Example
 
-<p align="center">
+<div align="center">
     <img src="https://user-images.githubusercontent.com/40824677/189324539-204da555-2662-444f-81a8-6a99d6136ebf.png">
-</p>
+</div>
 
 ## Installation
 
@@ -63,8 +63,3 @@ For this project and fututre C++ projects it is only required to have `clang` an
 For a first module, it was mostly easy, except for *ex02*, which was a bit tricky to understand at first.
 
 May 16th, 2022
-
-<p align="center">
-  <a href="https://github.com/madebypixel02/CPP-Modules">&#127968;</a>
-  <a href="https://github.com/madebypixel02/CPP-Module-01">&#10145;</a>
-</p>
